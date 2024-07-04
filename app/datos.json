@@ -1,15 +1,15 @@
 {
   "idiomas": [
     {
-      "español": {
+      "Español": {
         "accesorios": "accesorios",
         "planes": "planes",
         "ofertas": "ofertas",
-        "idioma": "español"
+        "idioma": "Español"
       }
     },
     {
-      "inglés": {
+      "English": {
         "accesorios": "accessories",
         "planes": "plans",
         "ofertas": "offers",
@@ -17,7 +17,7 @@
       }
     },
     {
-      "francés": {
+      "français": {
         "accesorios": "accessoires",
         "planes": "plans",
         "ofertas": "offres",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "alemán": {
+      "Deutsch": {
         "accesorios": "Zubehör",
         "planes": "Pläne",
         "ofertas": "Angebote",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "portugués": {
+      "português": {
         "accesorios": "acessórios",
         "planes": "planos",
         "ofertas": "ofertas",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "chino simplificado": {
+      "简体中文": {
         "accesorios": "配件",
         "planes": "计划",
         "ofertas": "优惠",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "japonés": {
+      "日本語": {
         "accesorios": "アクセサリー",
         "planes": "計画",
         "ofertas": "オファー",
@@ -65,7 +65,7 @@
       }
     },
     {
-      "coreano": {
+      "한국어": {
         "accesorios": "액세서리",
         "planes": "계획",
         "ofertas": "제공",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "árabe": {
+      "العربية": {
         "accesorios": "إكسسوارات",
         "planes": "خطط",
         "ofertas": "عروض",

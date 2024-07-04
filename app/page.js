@@ -2,17 +2,24 @@
 /*import de estilos y librerias*/
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useState } from "react";
 /**import de jsaon de datos*/
 import barra from './datos.json';
 /**Import de componentes */
-import Barra from "./_Barra/barra";
+import Barra from "../_componentes/_Barra/Barra";
+import Contenido from "@/_componentes/_Contenido/Contenido";
 export default function Home() {
+  const [idiomaSeleccionado, FidiomaSeleccionado] = useState("Español");
+  const [seleccion,Fseleccion]=useState("")
   return (
     <div>
       <nav>
-        <Barra datos={barra}></Barra>
+        <Barra datos={barra} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado}  Fseleccion={Fseleccion} seleccion={seleccion} ></Barra>
       </nav>
-      hola 
+      <div>
+        <Contenido Fseleccion={Fseleccion} seleccion={seleccion} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado} >
+        </Contenido>  
+      </div> 
     </div>
   );
 }
