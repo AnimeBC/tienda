@@ -1,0 +1,4 @@
+.todo{}
+.cambio{height: 70vh;width: 100%;}
+.imagenContenedor{position: relative;width: 100%;height: 100%;}
+.imagenContenedor img{object-fit: cover;}

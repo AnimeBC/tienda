@@ -4,17 +4,17 @@ import { useState } from "react";
 import Link from "next/link";
 export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fseleccion,seleccion}) {
   const [mostrar, Fmostrar] = useState(0);
-  const [iconoActivo, setIconoActivo] = useState(null);
+  const [iconoActivo, FiconoActivo] = useState(null);
   const datosIdioma = datos["idiomas"].find(
     (item) => Object.keys(item)[0] === idiomaSeleccionado
   )[idiomaSeleccionado];
   function cambiarIcono(a, valor) {
     Fmostrar(valor);
-    setIconoActivo(valor);
+    FiconoActivo(valor);
   }
   function resetIcono() {
     Fmostrar(0);
-    setIconoActivo(null);
+    FiconoActivo(null);
   }
   const nombresIdiomas = datos["idiomas"].map((obj) => Object.keys(obj)[0]);
   return (
@@ -96,7 +96,7 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
                     <ul className={estilos.flotanteulZ}>
                       {nombresIdiomas.map((nombre, index) => (
                         <li key={index} className={estilos.flotanteulliZ}>
-                          <Link href={`#${nombre}`} onClick={()=>{FidiomaSeleccionado(nombre);Fmostrar(0);}}>{nombre}</Link>
+                          <Link href={`#${nombre}`} onClick={()=>{FidiomaSeleccionado(nombre);Fmostrar(0);FiconoActivo(null)}}>{nombre}</Link>
                         </li>
                       ))}
                     </ul>
