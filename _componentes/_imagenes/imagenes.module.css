@@ -1,0 +1,12 @@
+.todo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ocultar desbordamiento de la imagen */
+}
+.todo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar la imagen dentro del contenedor */
+  transition: transform 0.3s ease; /* Transición suave para el cambio de imagen */
+}

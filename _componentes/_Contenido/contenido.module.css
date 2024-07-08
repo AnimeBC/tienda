@@ -1,4 +1,28 @@
-.todo{}
-.cambio{height: 70vh;width: 100%;}
-.imagenContenedor{position: relative;width: 100%;height: 100%;}
-.imagenContenedor img{object-fit: cover;}
+.todo {display: flex;justify-content: center;align-items: center;width: 100%;background-color: #f0f0f0; /* Color de fondo */}
+.cambio {height: 70vh;width: 90%; /* Ancho máximo para mantener la proporción */margin: 0 auto; /* Centrar horizontalmente */overflow: hidden; 
+    /* Ocultar desbordamiento */box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */border-radius: 8px; /* Bordes redondeados */position: relative;}
+.controles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.anterior,
+.siguiente {
+  background-color: rgba(0, 0, 0, 0.2); /* Fondo más oscuro para los botones */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 2% 2%;
+  font-size: 1.2rem;
+  outline: none; /* Eliminar borde al enfocar */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.anterior:hover,
+.siguiente:hover {
+  background-color: rgb(0, 0, 0); /* Cambio de color al pasar el mouse */
+}
