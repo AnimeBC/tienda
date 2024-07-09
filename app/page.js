@@ -8,6 +8,7 @@ import barra from './datos.json';
 /**Import de componentes */
 import Barra from "../_componentes/_Barra/Barra";
 import Contenido from "@/_componentes/_Contenido/Contenido";
+import Servicios from "@/_componentes/_Servicios/Servicios";
 export default function Home() {
   const [idiomaSeleccionado, FidiomaSeleccionado] = useState("Español");
   const [seleccion,Fseleccion]=useState("")
@@ -19,7 +20,10 @@ export default function Home() {
       <div>
         <Contenido Fseleccion={Fseleccion} seleccion={seleccion} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado} >
         </Contenido>  
-      </div> 
+      </div>
+      <div>
+        <Servicios/> 
+      </div>
     </div>
   );
 }

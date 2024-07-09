@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-import withPlaiceholder from '@plaiceholder/next';
-import withTM from 'next-transpile-modules';
-
 const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
@@ -14,4 +11,4 @@ const nextConfig = {
   },
 };
 
-export default withTM(['node:fs/promises'])(withPlaiceholder(nextConfig));
+export default (nextConfig);

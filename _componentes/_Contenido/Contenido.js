@@ -1,5 +1,4 @@
 import estilos from "./contenido.module.css";
-import Image from "next/image";
 import { useState } from "react";
 import imagenes from "../../app/imagenes.json";
 import Imagenes from "../_imagenes/Imagenes";
@@ -27,7 +26,7 @@ export default function Contenido() {
             <div className={estilos.cambio}>
                 <div className={estilos.imagenContenedor}>
                     <Imagenes
-                        url={`/${urlsImagenes[indiceActual]}`}
+                        url={`${urlsImagenes[indiceActual]}`}
                     />
                 </div>
                 <div className={estilos.controles}>
