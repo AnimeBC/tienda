@@ -1,79 +1,42 @@
-.todo {
-    padding: 20px;
-}
-
-.titulo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.carrusel_container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
+.todo {padding: 20px;}
+.titulo {text-align: center;margin-bottom: 20px;}
+.carrusel_container {position: relative;width: 100%;overflow: hidden;}
 .carrusel {
-    display: flex;
-    transition: transform 0.3s ease;
-    width: 300%; /* 3 cards */
-}
-
-.card {
-    flex: 0 0 33.33%; /* Each card takes up one-third of the carousel */
-    margin: 0 10px;
+    margin-left: 5%;
+    width: 90%;
+    display: grid;
+    justify-content: center;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    grid-template-columns: repeat(auto-fill, 30%);
+    gap: 3%;
+    transition: transform 0.5s ease; /* Agregar una transición suave */
 }
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
+.targeta {position: relative;flex: 0 0 33.33%; /* Each card takes up one-third of the carousel */margin: 0 10px;
+    text-align: center;padding: 0%;border-radius: 10px;background-color: #f8f8f8;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;width: 100%;height: 70vh;}
+.targeta:hover {transform: translateY(-10px) scale(1.1); /* Aumenta el tamaño al hacer hover */box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);cursor: pointer;transition: all 0.2    ;}
+.targeta:hover > h3 {z-index: 3;height: 18%; /* Ajusta la altura aumentada al hacer hover */}
+.targeta:hover > button {z-index: 3;bottom: 10%;}
+.targeta:hover > .opacidad {display: flex;}
+.targeta h3 {position: absolute;top: 0%;display: flex;align-items: center;justify-content: center;left: 0%;margin: 0%;padding: 0%;
+    height: 15%;background-image: linear-gradient(  120deg,  rgba(255, 251, 0, 0.904) 50%,  rgba(66, 171, 241, 0.904) 80%);
+    color: white;font-size: 1.2em;font-weight: 600;width: 100%;}
+.targeta button {position: absolute;bottom: 20px;left: 50%;transform: translateX(-50%);padding: 10px 20px;border: none;
+    border-radius: 5px;background-color: rgba(66, 171, 241, 0.904);
+    color: #fff;cursor: pointer;transition: background-color 0.3s;border-radius: 50px;width: 60%;}
+.targeta button:hover {background-color: rgba(0, 68, 255, 0.904);}
+.arrow {position: absolute;top: 50%;transform: translateY(-50%);background-color: rgba(0, 0, 0, 0.5);color: #fff;
+    border: none;padding: 12px;cursor: pointer;z-index: 1;border-radius: 50%;transition: background-color 0.3s, transform 0.3s;}
+.arrow:hover {background-color: rgba(0, 0, 0, 0.7);font-size: 2rem;transition: all 0.1s /* Aumenta ligeramente el tamaño al hacer hover */}
+.arrow_left {left: 2%;}
+.arrow_right {right: 2%;}
+.arrow {font-size: 1.5em; /* Tamaño del ícono */box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave para resaltar */}
+/*cono extra para mostrar cuando se pasa el mouse sobre el carrusel */
+.opacidad {display: none;position: absolute;top: 0%;left: 0%;width: 100%;height: 100%;margin: 0%;padding: 0%;
+    background-color: rgba(0, 0, 0, 0.425);z-index: 2;align-items: center;justify-content: center;
 }
-
-.card h3 {
-    margin: 10px 0;
-    color: #333;
-}
-
-.card p {
-    color: #666;
-}
-
-.card button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff4c4c;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.card button:hover {
-    background-color: #ff1c1c;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.arrow_left {
-    left: 0;
-}
-
-.arrow_right {
-    right: 0;
-}
+.opacidad ion-icon {font-size: 5rem; /* Ajusta el tamaño del ícono según tu preferencia */background-color: rgb(54, 54, 54,0.6);
+     /* Color de fondo del ícono */color: rgb(255, 255, 255); /* Color del ícono */padding: 20px; /* Espacio interno alrededor del ícono */border-radius: 50%; 
+     /* Borde redondeado para crear un círculo */display: flex;align-items: center;justify-content: center;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      /* Sombra para resaltar el ícono */transition: transform 0.3s ease-in-out; /* Transición suave */}
+.opacidad ion-icon:hover {transform: scale(1.2); /* Aumenta el tamaño del ícono al hacer hover */}
