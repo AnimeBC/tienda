@@ -13,24 +13,39 @@ export default function Servicios() {
     const [posicionA, setPosicionA] = useState(3);
     const carruselRef = useRef(null);
     const intervalRef = useRef(null);
+    const timeoutRef = useRef(null);
 
     useEffect(() => {
         startInterval();
         return () => clearInterval(intervalRef.current);
-    }, [posicion, posicionA]);
+    }, [posicion,posicionA]);
 
     const startInterval = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
         intervalRef.current = setInterval(() => {
             clickDerecho();
         }, 3000);
     };
 
     const stopInterval = () => {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    };
+
+    const resetInterval = () => {
+        stopInterval();
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
+            startInterval();
+        }, 3000);
     };
 
     const clickIzquierdo = () => {
-        stopInterval();
         if (posicion > 0) {
             const newPosition = posicion - 1;
             const newPositionA = posicionA - 1;
@@ -50,7 +65,6 @@ export default function Servicios() {
     };
 
     const clickDerecho = () => {
-        stopInterval();
         if (posicionA < items.length) {
             const newPosition = posicion + 1;
             const newPositionA = posicionA + 1;
@@ -73,7 +87,12 @@ export default function Servicios() {
     };
 
     const handleMouseLeave = () => {
-        startInterval();
+        resetInterval();
+    };
+
+    const handleCarruselClick = () => {
+        stopInterval();
+        resetInterval();
     };
 
     return (
@@ -85,8 +104,9 @@ export default function Servicios() {
                 className={estilos.carrusel_container}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onClick={handleCarruselClick}
             >
-                <button className={`${estilos.arrow} ${estilos.arrow_left}`} onClick={clickIzquierdo}>&#9664;</button>
+                <button className={`${estilos.arrow} ${estilos.arrow_left}`} onClick={() => { clickIzquierdo(); resetInterval(); }}>&#9664;</button>
                 <div className={estilos.carrusel} ref={carruselRef}>
                     {items.slice(posicion, posicionA).map((a, b) => (
                         <div key={b} className={estilos.targeta}>
@@ -97,7 +117,7 @@ export default function Servicios() {
                         </div>
                     ))}
                 </div>
-                <button className={`${estilos.arrow} ${estilos.arrow_right}`} onClick={clickDerecho}>&#9654;</button>
+                <button className={`${estilos.arrow} ${estilos.arrow_right}`} onClick={() => { clickDerecho(); resetInterval(); }}>&#9654;</button>
             </div>
         </div>
     );
