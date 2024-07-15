@@ -1,105 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.todo {display: block;width: 100%;}
+.titulo{width: 95%;margin-left: 2.5%;text-align: left;}
+.tituloA {font-family: 'Poppins', sans-serif;background: linear-gradient(45deg, #ff6f61, #d4fc79);color: transparent;
+-webkit-background-clip: text;background-clip: text;display:inline-flex;margin-left: 5%;}
+.carrusel_contenedor {position: relative;width: 95%;border-radius: 10px;margin-top: 2%;background-color: red;}
 
-.todo {
-    display: grid;
-    grid-template-columns: repeat(auto-flll,23%);
-    gap: 2%;
-    justify-content: center;align-items: center;
-}
-.titulo{box-shadow: 15px 1px 5px 1px;width: 100%;text-align: left;}
-.tituloA {
-    font-family: 'Poppins', sans-serif; /* Cambia la fuente del título */
-    background: linear-gradient(45deg, #ff6f61, #d4fc79); /* Fondo degradado */
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-
-}
-
-.carrusel_container {
-    position: relative;
-    width: 95%; /* Ocupa el 95% del ancho */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.targeta {
-    min-width: 23%; /* Ajustado para más separación */
-    margin-right: 1%; /* Espacio entre tarjetas */
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 15px; /* Más redondeado */
-    padding: 15px; /* Más espacio interior */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
-}
-
-.targeta:hover {
-    transform: scale(1.05); /* Efecto hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra en hover */
-}
-
-.targeta img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.targeta h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif; /* Fuente personalizada */
-    background: linear-gradient(45deg, #84fab0, #8fd3f4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: center; /* Centrar texto */
-}
-
-.targeta button {
-    margin-top: 10px;
-    padding: 10px 15px; /* Más espacio en el botón */
-    border: none;
-    background-color: #0070f3;
-    color: #fff;
-    border-radius: 10px; /* Más redondeado */
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
-    transition: background-color 0.3s ease; /* Transición para hover */
-}
-
-.targeta button:hover {
-    background-color: #005bb5;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    padding: 12px; /* Más espacio en las flechas */
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.arrow_left {
-    left: 10px;
-}
-
-.arrow_right {
-    right: 10px;
-}
+.carrusel {display: flex;transition: transform 0.5s ease-in-out;}
+.targeta {min-width: 23%;margin-right: 1%;flex-shrink: 0;display: flex;flex-direction: column;
+    align-items: center;background-color: #fff;border-radius: 15px;padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.targeta:hover {transform: scale(1.05);box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+.targeta img {max-width: 100%;border-radius: 10px;margin-bottom: 10px;}
+.targeta h3 {margin-top: 10px;font-size: 20px;font-family: 'Montserrat', sans-serif;background: linear-gradient(45deg, #84fab0, #8fd3f4);
+    -webkit-background-clip: text;background-clip: text;color: transparent;text-align: center;}
+.targeta button {margin-top: 10px;padding: 10px 15px;border: none;background-color: #0070f3;color: #fff;
+    border-radius: 10px;cursor: pointer;font-family: 'Poppins', sans-serif;transition: background-color 0.3s ease;}
+.targeta button:hover {background-color: #005bb5;}
+.arrow {position: absolute;top: 50%;transform: translateY(-50%);background: rgba(0, 0, 0, 0.7);color: #fff;
+    border: none;font-size: 24px;padding: 12px;cursor: pointer;border-radius: 50%;z-index: 1;}
+.arrow_left {left: 10px;}
+.arrow_right {right: 10px;}

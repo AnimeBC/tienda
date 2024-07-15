@@ -113,7 +113,7 @@ export default function Noticias({ idiomaSeleccionado }) {
         </div>
       </div>
       <div
-        className={estilos.carrusel_container}
+        className={estilos.carrusel_contenedor}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleCarruselClick}
@@ -124,8 +124,7 @@ export default function Noticias({ idiomaSeleccionado }) {
             clickIzquierdo();
             resetInterval();
           }}
-        >
-          &#9664;
+        >&#9664;
         </button>
         <div className={estilos.carrusel} ref={carruselRef}>
           {items.slice(posicion, posicionA).map((item, index) => (
@@ -133,8 +132,8 @@ export default function Noticias({ idiomaSeleccionado }) {
               <img src={item.imagen_url} alt={item.titulo} />
               <h3>{item.titulo}</h3>
               <button>{item.descripcion}</button>
-            </div>
-          ))}
+            </div>))
+          }
         </div>
         <button
           className={`${estilos.arrow} ${estilos.arrow_right}`}
@@ -142,8 +141,7 @@ export default function Noticias({ idiomaSeleccionado }) {
             clickDerecho();
             resetInterval();
           }}
-        >
-          &#9654;
+        >&#9654;
         </button>
       </div>
     </div>
