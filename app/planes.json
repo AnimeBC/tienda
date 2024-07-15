@@ -1,0 +1,87 @@
+{
+    "Español": {
+      "Planes Hogar": {
+        "68.90": {
+          "nombre": "Plan Hogar 68.90",
+          "descripcion": "Disfruta de una conexión estable y rápida para toda tu familia.",
+          "beneficios": "Internet ilimitado, llamadas nacionales ilimitadas, TV por cable con 100 canales.",
+          "precio": 68.90
+        },
+        "70": {
+          "nombre": "Plan Hogar 70",
+          "descripcion": "Acceso a servicios premium para tu hogar.",
+          "beneficios": "Internet de alta velocidad, llamadas internacionales ilimitadas, TV por cable con 150 canales.",
+          "precio": 70
+        },
+        "69": {
+          "nombre": "Plan Hogar 69",
+          "descripcion": "La mejor opción para entretenimiento en el hogar.",
+          "beneficios": "Internet rápido, llamadas ilimitadas, TV por cable con 120 canales.",
+          "precio": 69
+        }
+      },
+      "Planes móviles": {
+        "68.90": {
+          "nombre": "Plan Móvil 68.90",
+          "descripcion": "Conéctate en cualquier lugar con datos ilimitados.",
+          "beneficios": "Datos ilimitados, llamadas y mensajes ilimitados, roaming internacional.",
+          "precio": 68.90
+        },
+        "70": {
+          "nombre": "Plan Móvil 70",
+          "descripcion": "La mejor cobertura y velocidad para tu móvil.",
+          "beneficios": "Datos de alta velocidad ilimitados, llamadas y mensajes ilimitados, roaming internacional premium.",
+          "precio": 70
+        },
+        "69": {
+          "nombre": "Plan Móvil 69",
+          "descripcion": "Una excelente opción para tu conexión móvil.",
+          "beneficios": "Datos ilimitados, llamadas ilimitadas, mensajes ilimitados, roaming internacional.",
+          "precio": 69
+        }
+      }
+    },
+    "English": {
+      "Home Plans": {
+        "68.90": {
+          "nombre": "Home Plan 68.90",
+          "descripcion": "Enjoy a stable and fast connection for your entire family.",
+          "beneficios": "Unlimited internet, unlimited national calls, cable TV with 100 channels.",
+          "precio": 68.90
+        },
+        "70": {
+          "nombre": "Home Plan 70",
+          "descripcion": "Access to premium services for your home.",
+          "beneficios": "High-speed internet, unlimited international calls, cable TV with 150 channels.",
+          "precio": 70
+        },
+        "69": {
+          "nombre": "Home Plan 69",
+          "descripcion": "The best option for home entertainment.",
+          "beneficios": "Fast internet, unlimited calls, cable TV with 120 channels.",
+          "precio": 69
+        }
+      },
+      "Mobile Plans": {
+        "68.90": {
+          "nombre": "Mobile Plan 68.90",
+          "descripcion": "Stay connected anywhere with unlimited data.",
+          "beneficios": "Unlimited data, unlimited calls and messages, international roaming.",
+          "precio": 68.90
+        },
+        "70": {
+          "nombre": "Mobile Plan 70",
+          "descripcion": "The best coverage and speed for your mobile.",
+          "beneficios": "Unlimited high-speed data, unlimited calls and messages, premium international roaming.",
+          "precio": 70
+        },
+        "69": {
+          "nombre": "Mobile Plan 69",
+          "descripcion": "An excellent choice for your mobile connection.",
+          "beneficios": "Unlimited data, unlimited calls, unlimited messages, international roaming.",
+          "precio": 69
+        }
+      }
+    }
+  }
+  

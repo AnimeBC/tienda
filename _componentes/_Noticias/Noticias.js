@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import estilos from "./noticias.module.css";
 import datos from "../../app/noticias.json";
+import Imagenes from "../_imagenes/Imagenes";
 
 export default function Noticias({ idiomaSeleccionado }) {
-  const noticias = datos.idiomas.find((idioma) => idioma[idiomaSeleccionado])[
-    idiomaSeleccionado
-  ];
+  const noticias = datos.idiomas.find((idioma) => idioma[idiomaSeleccionado])[idiomaSeleccionado];
   const items = noticias.slice(0, -1).map((noticia, index) => {
     const key = Object.keys(noticia)[0];
     return {
@@ -17,71 +16,65 @@ export default function Noticias({ idiomaSeleccionado }) {
   const [posicion, setPosicion] = useState(0);
   const [posicionA, setPosicionA] = useState(4);
   const carruselRef = useRef(null);
-  const intervalRef = useRef(null);
-  const timeoutRef = useRef(null);
+  const intervaloRef = useRef(null);
+  const tiempoRef = useRef(null);
 
   useEffect(() => {
-    startInterval();
-    return () => clearInterval(intervalRef.current);
+    iniciarIntervalo();
+    return () => clearInterval(intervaloRef.current);
   }, [posicion, posicionA]);
 
-  const startInterval = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+  const iniciarIntervalo = () => {
+    if (intervaloRef.current) {
+      clearInterval(intervaloRef.current);
     }
-    intervalRef.current = setInterval(() => {
+    intervaloRef.current = setInterval(() => {
       clickDerecho();
     }, 3000);
   };
 
-  const stopInterval = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+  const detenerIntervalo = () => {
+    if (intervaloRef.current) {
+      clearInterval(intervaloRef.current);
     }
   };
 
-  const resetInterval = () => {
-    stopInterval();
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+  const reiniciarIntervalo = () => {
+    detenerIntervalo();
+    if (tiempoRef.current) {
+      clearTimeout(tiempoRef.current);
     }
-    timeoutRef.current = setTimeout(() => {
-      startInterval();
+    tiempoRef.current = setTimeout(() => {
+      iniciarIntervalo();
     }, 3000);
   };
 
   const clickIzquierdo = () => {
     if (posicion > 0) {
-      const newPosition = posicion - 1;
-      const newPositionA = posicionA - 1;
-      setPosicion(newPosition);
-      setPosicionA(newPositionA);
+      const nuevaPosicion = posicion - 1;
+      const nuevaPosicionA = posicionA - 1;
+      setPosicion(nuevaPosicion);
+      setPosicionA(nuevaPosicionA);
       setTimeout(() => {
-        carruselRef.current.style.transform = `translateX(-${
-          newPosition * (23 + 1)
-        }%)`;
+        carruselRef.current.style.transform = `translateX(-${nuevaPosicion * (23 + 1)}%)`;
       }, 0);
     } else {
       setPosicion(items.length - 4);
       setPosicionA(items.length);
       setTimeout(() => {
-        carruselRef.current.style.transform = `translateX(-${
-          (items.length - 4) * (23 + 1)
-        }%)`;
+        carruselRef.current.style.transform = `translateX(-${(items.length - 4) * (23 + 1)}%)`;
       }, 0);
     }
   };
 
   const clickDerecho = () => {
     if (posicionA < items.length) {
-      const newPosition = posicion + 1;
-      const newPositionA = posicionA + 1;
-      setPosicion(newPosition);
-      setPosicionA(newPositionA);
+      const nuevaPosicion = posicion + 1;
+      const nuevaPosicionA = posicionA + 1;
+      setPosicion(nuevaPosicion);
+      setPosicionA(nuevaPosicionA);
       setTimeout(() => {
-        carruselRef.current.style.transform = `translateX(-${
-          newPosition * (23 + 1)
-        }%)`;
+        carruselRef.current.style.transform = `translateX(-${nuevaPosicion * (23 + 1)}%)`;
       }, 0);
     } else {
       setPosicion(0);
@@ -93,16 +86,16 @@ export default function Noticias({ idiomaSeleccionado }) {
   };
 
   const handleMouseEnter = () => {
-    stopInterval();
+    detenerIntervalo();
   };
 
   const handleMouseLeave = () => {
-    resetInterval();
+    reiniciarIntervalo();
   };
 
   const handleCarruselClick = () => {
-    stopInterval();
-    resetInterval();
+    detenerIntervalo();
+    reiniciarIntervalo();
   };
 
   return (
@@ -118,31 +111,39 @@ export default function Noticias({ idiomaSeleccionado }) {
         onMouseLeave={handleMouseLeave}
         onClick={handleCarruselClick}
       >
-        <button
-          className={`${estilos.arrow} ${estilos.arrow_left}`}
-          onClick={() => {
-            clickIzquierdo();
-            resetInterval();
-          }}
-        >&#9664;
-        </button>
+        {posicion > 0 && (
+          <button
+            className={`${estilos.flecha} ${estilos.flecha_izquierda}`}
+            onClick={() => {
+              clickIzquierdo();
+              reiniciarIntervalo();
+            }}
+          >
+            &#9664;
+          </button>
+        )}
         <div className={estilos.carrusel} ref={carruselRef}>
-          {items.slice(posicion, posicionA).map((item, index) => (
-            <div key={index} className={estilos.targeta}>
-              <img src={item.imagen_url} alt={item.titulo} />
-              <h3>{item.titulo}</h3>
-              <button>{item.descripcion}</button>
-            </div>))
-          }
+          {items.slice(posicion, posicionA).map((a, index) => (
+            <div key={index} className={estilos.tarjeta}>
+              <div className={estilos.imagenContenedor}>
+                <Imagenes url={a.imagen_url} alt={a.titulo} />
+              </div>
+              <h3>{a.titulo}</h3>
+              <button>{a.descripcion}</button>
+            </div>
+          ))}
         </div>
-        <button
-          className={`${estilos.arrow} ${estilos.arrow_right}`}
-          onClick={() => {
-            clickDerecho();
-            resetInterval();
-          }}
-        >&#9654;
-        </button>
+        {posicionA < items.length && (
+          <button
+            className={`${estilos.flecha} ${estilos.flecha_derecha}`}
+            onClick={() => {
+              clickDerecho();
+              reiniciarIntervalo();
+            }}
+          >
+            &#9654;
+          </button>
+        )}
       </div>
     </div>
   );

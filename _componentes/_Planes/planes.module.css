@@ -1,0 +1,23 @@
+.todo{width: 100%;}
+.elegir{  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en una línea */}
+.eleccion{background-color: red;  background-color: red;
+  width: 23%; /* Ancho de cada elemento del grid */
+  text-align: center;
+  margin: 0.5%; /* Añade margen entre los elementos */
+    /* Media query para dispositivos móviles */
+    @media (max-width: 768px) {
+      width: 45%; /* Ajusta el ancho para dos elementos por fila en pantallas más pequeñas */
+    }
+    /* Media query para pantallas aún más pequeñas */
+    @media (max-width: 480px) {
+      width: 100%; /* Ajusta el ancho para que ocupe toda la pantalla en dispositivos muy pequeños */
+      margin: 5px 0; /* Cambia el margen para un mejor espaciado */
+    }
+}
+.eleccion:hover{cursor: pointer;transition: all 0.2s;background-color: orange;}
+
+/*contenido*/
+.contenido{background-color: orange;width: 100%;height: 60vh;}

@@ -1,10 +1,10 @@
 import React from "react"
 import Image from "next/image"
 import estilos from "./imagenes.module.css"
-export default function Imagenes({ url }) {
+export default function Imagenes({ url,alt }) {
   return (
     <div className={estilos.todo}>
-      <Image src={`/${url}`} fill  alt="Imagen cargando" />
+      <Image src={`/${url}`} fill alt={alt} />
     </div>
   );
 }
