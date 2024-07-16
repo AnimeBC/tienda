@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fseleccion,seleccion}) {
   const [mostrar, Fmostrar] = useState(0);
   const [iconoActivo, FiconoActivo] = useState(null);
-  const datosIdioma = datos["idiomas"].find(
+  const datosIdioma = Object.values(datos["idiomas"]).find(
     (item) => Object.keys(item)[0] === idiomaSeleccionado
   )[idiomaSeleccionado];
   function cambiarIcono(a, valor) {
@@ -16,7 +16,10 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
     Fmostrar(0);
     FiconoActivo(null);
   }
+  //const nombresIdiomas = datos["idiomas"].map((obj) => Object.keys(obj)[0]);
   const nombresIdiomas = datos["idiomas"].map((obj) => Object.keys(obj)[0]);
+  const subcategorias = Object.keys(datosIdioma)
+  console.log(Object.values(datos["idiomas"]));
   return (
     <div className={estilos.todo}>
       <div className={estilos.logo}>BITEL</div>
@@ -27,7 +30,7 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
               onMouseEnter={(a) => cambiarIcono(a, 1)}
               onMouseLeave={resetIcono}
             >
-              {datosIdioma.accesorios}
+              {subcategorias[0]}
               <ion-icon
                 name={
                   iconoActivo === 1 ? "caret-up-outline" : "caret-down-outline"
@@ -44,7 +47,7 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
               onMouseEnter={(a) => cambiarIcono(a, 2)}
               onMouseLeave={resetIcono}
             >
-              {datosIdioma.planes}
+               {subcategorias[1]}
               <ion-icon
                 name={
                   iconoActivo === 2 ? "caret-up-outline" : "caret-down-outline"
@@ -61,7 +64,7 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
               onMouseEnter={(a) => cambiarIcono(a, 3)}
               onMouseLeave={resetIcono}
             >
-              {datosIdioma.ofertas}
+             {subcategorias[2]}
               <ion-icon
                 name={
                   iconoActivo === 3 ? "caret-up-outline" : "caret-down-outline"
@@ -84,7 +87,7 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
               onMouseEnter={(a) => cambiarIcono(a, 4)}
               onMouseLeave={resetIcono}
             >
-              {datosIdioma.idioma}
+                {idiomaSeleccionado}
               <ion-icon
                 name={
                   iconoActivo === 4 ? "caret-up-outline" : "caret-down-outline"
@@ -94,9 +97,9 @@ export default function Barra({ datos,FidiomaSeleccionado,idiomaSeleccionado,Fse
                 <div className={estilos.flotante}>
                   <div className={estilos.flotanteA}>
                     <ul className={estilos.flotanteulZ}>
-                      {nombresIdiomas.map((nombre, index) => (
+                      {nombresIdiomas.map((a, index) => (
                         <li key={index} className={estilos.flotanteulliZ}>
-                          <Link href={`#${nombre}`} onClick={()=>{FidiomaSeleccionado(nombre);Fmostrar(0);FiconoActivo(null)}}>{nombre}</Link>
+                          <Link href={`#${a}`} onClick={()=>{FidiomaSeleccionado(a);Fmostrar(0);FiconoActivo(null)}}>{a}</Link>
                         </li>
                       ))}
                     </ul>

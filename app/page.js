@@ -23,7 +23,7 @@ export default function Home() {
         </Contenido>  
       </div>
       <div>
-        <Planes datos={planes} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado}  Fseleccion={Fseleccion} seleccion={seleccion} >
+        <Planes datos={planes} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado}>
         </Planes>  
       </div>
       <div>
