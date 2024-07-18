@@ -2,19 +2,28 @@
   "idiomas": [
     {
       "Español": {
-        "accesorios": {
-          "nombre": "accesorios",
-          "descripcion": "Descripción de accesorios en español"
-        },
         "planes": {
-          "nombre": "planes",
-          "descripcion": "Descripción de planes en español"
+          "EspañolP1": "P312312312312",
+          "EspañolP2": "P2312312312312321",
+          "EspañolP3": "P312312312312",
+          "EspañolP4": "P2312312312312321",
+          "EspañolP5": "P312312312312",
+          "EspañolP6": "P2312312312312321",
+          "EspañolP7": "P312312312312",
+          "EspañolP8": "P2312312312312321"
+        },
+        "Celulares": {
+          "EspañolC1": "C321dsdasdasd",
+          "EspañolC2": "Csqdwqd12e213"
+        },
+        "accesorios": {
+          "EspañolA1": "A12312312sadas",
+          "EspañolA2": "Aendie2grb12312"
         },
         "ofertas": {
-          "nombre": "ofertas",
-          "descripcion": "Descripción de ofertas en español"
-        },
-        "idioma": "Español"
+          "EspañolO1": "O3123dfwbfiweufb",
+          "EspañolO2": "O12312sdbsdt7yweqqe"
+        }
       }
     },
     {
