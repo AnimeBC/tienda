@@ -1,7 +1,5 @@
 import estilos from "./planes.module.css";
-import { useState, useRef } from "react";
-import imagenes from "../../app/imagenes.json";
-import Imagenes from "../_imagenes/Imagenes";
+import { useState, useRef, useEffect } from "react";
 
 export default function Planes({
   datos,
@@ -10,13 +8,27 @@ export default function Planes({
   Fseleccion,
   seleccion,
 }) {
-  const listaDeOpciones = Object.keys(datos[idiomaSeleccionado]);
-  const [capturaDeEleccion, FcapturaDeEleccion] = useState(listaDeOpciones[0]);
-  const [contenidoElegido, FcontenidoElegido] = useState(Object.entries(datos[idiomaSeleccionado][capturaDeEleccion]));
+  const [isLoading, setIsLoading] = useState(false);
+  const [capturaDeEleccion, FcapturaDeEleccion] = useState(null);
+  const [contenidoElegido, FcontenidoElegido] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const listaDeOpciones = Object.keys(datos[idiomaSeleccionado]);
+      FcapturaDeEleccion(listaDeOpciones[0]);
+      FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][listaDeOpciones[0]]));
+      setIsLoading(false);
+    }, 1000); // 1 segundo de retardo simulado
+  }, [idiomaSeleccionado]);
 
   function cambiarOpcion(a) {
-    FcapturaDeEleccion(String(a));
-    FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][capturaDeEleccion]));
+    setIsLoading(true);
+    setTimeout(() => {
+      FcapturaDeEleccion(String(a));
+      FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][a]));
+      setIsLoading(false);
+    }, 1000); // 1 segundo de retardo simulado
   }
 
   const carouselRef = useRef(null);
@@ -74,7 +86,7 @@ export default function Planes({
   return (
     <div className={estilos.todo}>
       <div className={estilos.elegir}>
-        {listaDeOpciones.map((a, b) => (
+        {Object.keys(datos[idiomaSeleccionado]).map((a, b) => (
           <div
             key={b}
             className={`${estilos.eleccion} ${capturaDeEleccion === a ? estilos.seleccionado : ''}`}
@@ -92,7 +104,9 @@ export default function Planes({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {contenidoElegido.length > 0 ? (
+        {isLoading ? (
+          <div className={estilos.loading}>Cargando...</div>
+        ) : contenidoElegido.length > 0 ? (
           contenidoElegido.map(([a, b]) => (
             <div key={a} className={estilos.contenidoA}>
               <h3>{b.nombre}</h3>
