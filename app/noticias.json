@@ -1,274 +1,206 @@
 {
-  "idiomas": [
-    {
-      "Español": [
-        {
-          "noticia 1": {
-            "titulo": "Nueva colección de accesorios",
-            "descripcion": "Descubre la nueva colección de accesorios para tu dispositivo.",
-            "imagen_url": "1.jpeg",
-            "otra_imagen_url": "https://example.com/imagen2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Planes postpago ahora disponibles",
-            "descripcion": "Obtén los mejores planes postpago con grandes beneficios.",
-            "imagen_url": "https://example.com/imagen3.jpg",
-            "otra_imagen_url": "https://example.com/imagen4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Ofertas exclusivas",
-            "descripcion": "Aprovecha nuestras ofertas exclusivas por tiempo limitado.",
-            "imagen_url": "https://example.com/imagen5.jpg",
-            "otra_imagen_url": "https://example.com/imagen6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Próximamente en todo",
-            "descripcion": "Estén atentos a nuestras próximas novedades y lanzamientos.",
-            "imagen_url": "https://example.com/proximamente.jpg",
-            "otra_imagen_url": "https://example.com/proximamente2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "Español" }
-      ]
+  "Español": {
+    "noticia 1": {
+      "titulo": "Nueva colección de accesorios",
+      "descripcion": "Descubre la nueva colección de accesorios para tu dispositivo.",
+      "imagen_url": "1.jpeg",
+      "otra_imagen_url": "https://example.com/imagen2.jpg",
+      "fecha": "2024-07-12",
+      "calificacion": 4.5
     },
-    {
-      "English": [
-        {
-          "noticia 1": {
-            "titulo": "New Accessories Collection",
-            "descripcion": "Discover the new collection of accessories for your device.",
-            "imagen_url": "https://example.com/image1.jpg",
-            "otra_imagen_url": "https://example.com/image2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Postpaid Plans Now Available",
-            "descripcion": "Get the best postpaid plans with great benefits.",
-            "imagen_url": "https://example.com/image3.jpg",
-            "otra_imagen_url": "https://example.com/image4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Exclusive Offers",
-            "descripcion": "Take advantage of our exclusive offers for a limited time.",
-            "imagen_url": "https://example.com/image5.jpg",
-            "otra_imagen_url": "https://example.com/image6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Coming Soon Everywhere",
-            "descripcion": "Stay tuned for our upcoming news and releases.",
-            "imagen_url": "https://example.com/comingsoon.jpg",
-            "otra_imagen_url": "https://example.com/comingsoon2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "English" }
-      ]
+    "noticia 2": {
+      "titulo": "Planes postpago ahora disponibles",
+      "descripcion": "Obtén los mejores planes postpago con grandes beneficios.",
+      "imagen_url": "https://example.com/imagen3.jpg",
+      "otra_imagen_url": "https://example.com/imagen4.jpg",
+      "fecha": "2024-07-11",
+      "calificacion": 4.7
     },
-    {
-      "français": [
-        {
-          "noticia 1": {
-            "titulo": "Nouvelle collection d'accessoires",
-            "descripcion": "Découvrez la nouvelle collection d'accessoires pour votre appareil.",
-            "imagen_url": "https://example.com/image1.jpg",
-            "otra_imagen_url": "https://example.com/image2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Plans postpayés maintenant disponibles",
-            "descripcion": "Obtenez les meilleurs plans postpayés avec de grands avantages.",
-            "imagen_url": "https://example.com/image3.jpg",
-            "otra_imagen_url": "https://example.com/image4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Offres exclusives",
-            "descripcion": "Profitez de nos offres exclusives pour une durée limitée.",
-            "imagen_url": "https://example.com/image5.jpg",
-            "otra_imagen_url": "https://example.com/image6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Bientôt partout",
-            "descripcion": "Restez à l'écoute pour nos prochaines nouvelles et sorties.",
-            "imagen_url": "https://example.com/bientot.jpg",
-            "otra_imagen_url": "https://example.com/bientot2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "français" }
-      ]
+    "noticia 3": {
+      "titulo": "Ofertas exclusivas",
+      "descripcion": "Aprovecha nuestras ofertas exclusivas por tiempo limitado.",
+      "imagen_url": "https://example.com/imagen5.jpg",
+      "otra_imagen_url": "https://example.com/imagen6.jpg",
+      "fecha": "2024-07-10",
+      "calificacion": 4.9
     },
-    {
-      "Deutsch": [
-        {
-          "noticia 1": {
-            "titulo": "Neue Zubehörkollektion",
-            "descripcion": "Entdecken Sie die neue Kollektion von Zubehör für Ihr Gerät.",
-            "imagen_url": "https://example.com/image1.jpg",
-            "otra_imagen_url": "https://example.com/image2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Postpaid-Pläne jetzt verfügbar",
-            "descripcion": "Erhalten Sie die besten Postpaid-Pläne mit großartigen Vorteilen.",
-            "imagen_url": "https://example.com/image3.jpg",
-            "otra_imagen_url": "https://example.com/image4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Exklusive Angebote",
-            "descripcion": "Nutzen Sie unsere exklusiven Angebote für eine begrenzte Zeit.",
-            "imagen_url": "https://example.com/image5.jpg",
-            "otra_imagen_url": "https://example.com/image6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Bald überall verfügbar",
-            "descripcion": "Bleiben Sie dran für unsere kommenden Nachrichten und Veröffentlichungen.",
-            "imagen_url": "https://example.com/bald.jpg",
-            "otra_imagen_url": "https://example.com/bald2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "Deutsch" }
-      ]
-    },
-    {
-      "italiano": [
-        {
-          "noticia 1": {
-            "titulo": "Nuova collezione di accessori",
-            "descripcion": "Scopri la nuova collezione di accessori per il tuo dispositivo.",
-            "imagen_url": "https://example.com/image1.jpg",
-            "otra_imagen_url": "https://example.com/image2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Piani postpagati ora disponibili",
-            "descripcion": "Ottieni i migliori piani postpagati con grandi vantaggi.",
-            "imagen_url": "https://example.com/image3.jpg",
-            "otra_imagen_url": "https://example.com/image4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Offerte esclusive",
-            "descripcion": "Approfitta delle nostre offerte esclusive per un tempo limitato.",
-            "imagen_url": "https://example.com/image5.jpg",
-            "otra_imagen_url": "https://example.com/image6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Prossimamente ovunque",
-            "descripcion": "Rimanete sintonizzati per le nostre prossime novità e uscite.",
-            "imagen_url": "https://example.com/prossimamente.jpg",
-            "otra_imagen_url": "https://example.com/prossimamente2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "italiano" }
-      ]
-    },
-    {
-      "português": [
-        {
-          "noticia 1": {
-            "titulo": "Nova coleção de acessórios",
-            "descripcion": "Descubra a nova coleção de acessórios para o seu dispositivo.",
-            "imagen_url": "https://example.com/image1.jpg",
-            "otra_imagen_url": "https://example.com/image2.jpg",
-            "fecha": "2024-07-12",
-            "calificacion": 4.5
-          }
-        },
-        {
-          "noticia 2": {
-            "titulo": "Planos pós-pagos agora disponíveis",
-            "descripcion": "Obtenha os melhores planos pós-pagos com grandes benefícios.",
-            "imagen_url": "https://example.com/image3.jpg",
-            "otra_imagen_url": "https://example.com/image4.jpg",
-            "fecha": "2024-07-11",
-            "calificacion": 4.7
-          }
-        },
-        {
-          "noticia 3": {
-            "titulo": "Ofertas exclusivas",
-            "descripcion": "Aproveite nossas ofertas exclusivas por tempo limitado.",
-            "imagen_url": "https://example.com/image5.jpg",
-            "otra_imagen_url": "https://example.com/image6.jpg",
-            "fecha": "2024-07-10",
-            "calificacion": 4.9
-          }
-        },
-        {
-          "noticia 4": {
-            "titulo": "Em breve em todos os lugares",
-            "descripcion": "Fique atento para nossas próximas notícias e lançamentos.",
-            "imagen_url": "https://example.com/em_breve.jpg",
-            "otra_imagen_url": "https://example.com/em_breve2.jpg",
-            "fecha": "2024-07-13",
-            "calificacion": 5.0
-          }
-        },
-        { "idioma": "português" }
-      ]
+    "noticia 4": {
+      "titulo": "Próximamente en todo",
+      "descripcion": "Estén atentos a nuestras próximas novedades y lanzamientos.",
+      "imagen_url": "https://example.com/proximamente.jpg",
+      "otra_imagen_url": "https://example.com/proximamente2.jpg",
+      "fecha": "2024-07-13",
+      "calificacion": 5.0
     }
-  ]
+  },
+  "English": {
+    "noticia 1": {
+      "title": "New Accessories Collection",
+      "description": "Discover the new collection of accessories for your device.",
+      "image_url": "1.jpeg",
+      "other_image_url": "https://example.com/proximamente2.jpg",
+      "date": "2024-07-12",
+      "rating": 4.5
+    },
+    "noticia 2": {
+      "title": "Postpaid Plans Now Available",
+      "description": "Get the best postpaid plans with great benefits.",
+      "image_url": "https://example.com/image3.jpg",
+      "other_image_url": "https://example.com/image4.jpg",
+      "date": "2024-07-11",
+      "rating": 4.7
+    },
+    "noticia 3": {
+      "title": "Exclusive Offers",
+      "description": "Take advantage of our exclusive offers for a limited time.",
+      "image_url": "https://example.com/image5.jpg",
+      "other_image_url": "https://example.com/image6.jpg",
+      "date": "2024-07-10",
+      "rating": 4.9
+    },
+    "noticia 4": {
+      "title": "Coming Soon Everywhere",
+      "description": "Stay tuned for our upcoming news and releases.",
+      "image_url": "https://example.com/comingsoon.jpg",
+      "other_image_url": "https://example.com/comingsoon2.jpg",
+      "date": "2024-07-13",
+      "rating": 5.0
+    }
+  },
+  "français": {
+    "noticia 1": {
+      "titre": "Nouvelle collection d'accessoires",
+      "description": "Découvrez la nouvelle collection d'accessoires pour votre appareil.",
+      "image_url": "https://example.com/image1.jpg",
+      "autre_image_url": "https://example.com/image2.jpg",
+      "date": "2024-07-12",
+      "évaluation": 4.5
+    },
+    "noticia 2": {
+      "titre": "Plans postpayés maintenant disponibles",
+      "description": "Obtenez les meilleurs plans postpayés avec de grands avantages.",
+      "image_url": "https://example.com/image3.jpg",
+      "autre_image_url": "https://example.com/image4.jpg",
+      "date": "2024-07-11",
+      "évaluation": 4.7
+    },
+    "noticia 3": {
+      "titre": "Offres exclusives",
+      "description": "Profitez de nos offres exclusives pour une durée limitée.",
+      "image_url": "https://example.com/image5.jpg",
+      "autre_image_url": "https://example.com/image6.jpg",
+      "date": "2024-07-10",
+      "évaluation": 4.9
+    },
+    "noticia 4": {
+      "titre": "Bientôt partout",
+      "description": "Restez à l'écoute pour nos prochaines nouvelles et sorties.",
+      "image_url": "https://example.com/bientot.jpg",
+      "autre_image_url": "https://example.com/bientot2.jpg",
+      "date": "2024-07-13",
+      "évaluation": 5.0
+    }
+  },
+  "Deutsch": {
+    "noticia 1": {
+      "titel": "Neue Zubehörkollektion",
+      "beschreibung": "Entdecken Sie die neue Kollektion von Zubehör für Ihr Gerät.",
+      "bild_url": "https://example.com/image1.jpg",
+      "anderes_bild_url": "https://example.com/image2.jpg",
+      "datum": "2024-07-12",
+      "bewertung": 4.5
+    },
+    "noticia 2": {
+      "titel": "Postpaid-Pläne jetzt verfügbar",
+      "beschreibung": "Erhalten Sie die besten Postpaid-Pläne mit großartigen Vorteilen.",
+      "bild_url": "https://example.com/image3.jpg",
+      "anderes_bild_url": "https://example.com/image4.jpg",
+      "datum": "2024-07-11",
+      "bewertung": 4.7
+    },
+    "noticia 3": {
+      "titel": "Exklusive Angebote",
+      "beschreibung": "Nutzen Sie unsere exklusiven Angebote für eine begrenzte Zeit.",
+      "bild_url": "https://example.com/image5.jpg",
+      "anderes_bild_url": "https://example.com/image6.jpg",
+      "datum": "2024-07-10",
+      "bewertung": 4.9
+    },
+    "noticia 4": {
+      "titel": "Bald überall verfügbar",
+      "beschreibung": "Bleiben Sie dran für unsere kommenden Nachrichten und Veröffentlichungen.",
+      "bild_url": "https://example.com/bald.jpg",
+      "anderes_bild_url": "https://example.com/bald2.jpg",
+      "datum": "2024-07-13",
+      "bewertung": 5.0
+    }
+  },
+  "italiano": {
+    "noticia 1": {
+      "titolo": "Nuova collezione di accessori",
+      "descrizione": "Scopri la nuova collezione di accessori per il tuo dispositivo.",
+      "immagine_url": "https://example.com/image1.jpg",
+      "altra_immagine_url": "https://example.com/image2.jpg",
+      "data": "2024-07-12",
+      "valutazione": 4.5
+    },
+    "noticia 2": {
+      "titolo": "Piani postpagati ora disponibili",
+      "descrizione": "Ottieni i migliori piani postpagati con grandi vantaggi.",
+      "immagine_url": "https://example.com/image3.jpg",
+      "altra_immagine_url": "https://example.com/image4.jpg",
+      "data": "2024-07-11",
+      "valutazione": 4.7
+    },
+    "noticia 3": {
+      "titolo": "Offerte esclusive",
+      "descrizione": "Approfitta delle nostre offerte esclusive per un tempo limitato.",
+      "immagine_url": "https://example.com/image5.jpg",
+      "altra_immagine_url": "https://example.com/image6.jpg",
+      "data": "2024-07-10",
+      "valutazione": 4.9
+    },
+    "noticia 4": {
+      "titolo": "Prossimamente ovunque",
+      "descrizione": "Rimanete sintonizzati per le nostre prossime novità e uscite.",
+      "immagine_url": "https://example.com/prossimamente.jpg",
+      "altra_immagine_url": "https://example.com/prossimamente2.jpg",
+      "data": "2024-07-13",
+      "valutazione": 5.0
+    }
+  },
+  "português": {
+    "noticia 1": {
+      "título": "Nova coleção de acessórios",
+      "descrição": "Descubra a nova coleção de acessórios para o seu dispositivo.",
+      "imagem_url": "https://example.com/image1.jpg",
+      "outra_imagem_url": "https://example.com/image2.jpg",
+      "data": "2024-07-12",
+      "avaliação": 4.5
+    },
+    "noticia 2": {
+      "título": "Planos pós-pagos agora disponíveis",
+      "descrição": "Obtenha os melhores planos pós-pagos com grandes benefícios.",
+      "imagem_url": "https://example.com/image3.jpg",
+      "outra_imagem_url": "https://example.com/image4.jpg",
+      "data": "2024-07-11",
+      "avaliação": 4.7
+    },
+    "noticia 3": {
+      "título": "Ofertas exclusivas",
+      "descrição": "Aproveite nossas ofertas exclusivas por tempo limitado.",
+      "imagem_url": "https://example.com/image5.jpg",
+      "outra_imagem_url": "https://example.com/image6.jpg",
+      "data": "2024-07-10",
+      "avaliação": 4.9
+    },
+    "noticia 4": {
+      "título": "Em breve em todos os lugares",
+      "descrição": "Fique atento para nossas próximas notícias e lançamentos.",
+      "imagem_url": "https://example.com/em_breve.jpg",
+      "outra_imagem_url": "https://example.com/em_breve2.jpg",
+      "data": "2024-07-13",
+      "avaliação": 5.0
+    }
+  }
 }

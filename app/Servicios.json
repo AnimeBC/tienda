@@ -1,0 +1,71 @@
+{
+    "Español": {
+      "Equipos": {
+        "1": {
+          "nombre": "Equipos",
+          "descripcion": "Me interesa",
+          "imagen_url": "imagen1.png",
+          "precio": 0
+        }
+      },
+      "Accesorios": {
+        "1": {
+          "nombre": "Accesorios",
+          "descripcion": "Me interesa",
+          "imagen_url": "imagen1.jpg",
+          "precio": 0
+        }
+      },
+      "Planes Postpago - Delivery": {
+        "1": {
+          "nombre": "Planes Postpago - Delivery",
+          "descripcion": "Me interesa",
+          "imagen_url": "imagen1.png",
+          "precio": 0
+        }
+      },
+      "Consultas": {
+        "1": {
+          "nombre": "Consultas",
+          "descripcion": "Me interesa",
+          "imagen_url": "imagen1.jpg",
+          "precio": 0
+        }
+      }
+    },
+    "English": {
+      "Equipment": {
+        "1": {
+          "name": "Equipment",
+          "description": "I'm interested",
+          "image_url": "imagen1.png",
+          "price": 0
+        }
+      },
+      "Accessories": {
+        "1": {
+          "name": "Accessories",
+          "description": "I'm interested",
+          "image_url": "imagen1.jpg",
+          "price": 0
+        }
+      },
+      "Postpaid Plans - Delivery": {
+        "1": {
+          "name": "Postpaid Plans - Delivery",
+          "description": "I'm interested",
+          "image_url": "imagen1.png",
+          "price": 0
+        }
+      },
+      "Queries": {
+        "1": {
+          "name": "Queries",
+          "description": "I'm interested",
+          "image_url": "imagen1.jpg",
+          "price": 0
+        }
+      }
+    }
+  }
+  

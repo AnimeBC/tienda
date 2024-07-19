@@ -4,20 +4,31 @@ import datos from "../../app/noticias.json";
 import Imagenes from "../_imagenes/Imagenes";
 
 export default function Noticias({ idiomaSeleccionado }) {
-  const noticias = datos.idiomas.find((idioma) => idioma[idiomaSeleccionado])[idiomaSeleccionado];
-  const items = noticias.slice(0, -1).map((noticia, index) => {
-    const key = Object.keys(noticia)[0];
-    return {
-      ...noticia[key],
-      key: index,
-    };
-  });
-
+  const [items, setItems] = useState([]);
   const [posicion, setPosicion] = useState(0);
   const [posicionA, setPosicionA] = useState(4);
   const carruselRef = useRef(null);
   const intervaloRef = useRef(null);
   const tiempoRef = useRef(null);
+
+  useEffect(() => {
+    // Actualizar los items cuando cambie el idioma seleccionado
+    const noticiasIdioma = datos[idiomaSeleccionado];
+    if (noticiasIdioma) {
+      const idiomaItems = Object.values(noticiasIdioma).map((noticia, index) => {
+        return {
+          key: index,
+          titulo: noticia.titulo || noticia.title,
+          descripcion: noticia.descripcion || noticia.description,
+          imagen_url: noticia.imagen_url || noticia.image_url,
+          otra_imagen_url: noticia.otra_imagen_url || noticia.other_image_url,
+          fecha: noticia.fecha || noticia.date,
+          calificacion: noticia.calificacion || noticia.rating,
+        };
+      });
+      setItems(idiomaItems);
+    }
+  }, [idiomaSeleccionado]);
 
   useEffect(() => {
     iniciarIntervalo();
@@ -111,38 +122,44 @@ export default function Noticias({ idiomaSeleccionado }) {
         onMouseLeave={handleMouseLeave}
         onClick={handleCarruselClick}
       >
-        {posicion > 0 && (
-          <button
-            className={`${estilos.flecha} ${estilos.flecha_izquierda}`}
-            onClick={() => {
-              clickIzquierdo();
-              reiniciarIntervalo();
-            }}
-          >
-            &#9664;
-          </button>
-        )}
-        <div className={estilos.carrusel} ref={carruselRef}>
-          {items.slice(posicion, posicionA).map((a, index) => (
-            <div key={index} className={estilos.tarjeta}>
-              <div className={estilos.imagenContenedor}>
-                <Imagenes url={a.imagen_url} alt={a.titulo} />
-              </div>
-              <h3>{a.titulo}</h3>
-              <button>{a.descripcion}</button>
+        {items.length === 0 ? (
+          <p>No hay contenido para mostrar.</p>
+        ) : (
+          <>
+            {posicion > 0 && (
+              <button
+                className={`${estilos.flecha} ${estilos.flecha_izquierda}`}
+                onClick={() => {
+                  clickIzquierdo();
+                  reiniciarIntervalo();
+                }}
+              >
+                &#9664;
+              </button>
+            )}
+            <div className={estilos.carrusel} ref={carruselRef}>
+              {items.slice(posicion, posicionA).map((item, index) => (
+                <div key={index} className={estilos.tarjeta}>
+                  <div className={estilos.imagenContenedor}>
+                    <Imagenes url={item.imagen_url} alt={item.titulo} />
+                  </div>
+                  <h3>{item.titulo}</h3>
+                  <button>{item.descripcion}</button>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        {posicionA < items.length && (
-          <button
-            className={`${estilos.flecha} ${estilos.flecha_derecha}`}
-            onClick={() => {
-              clickDerecho();
-              reiniciarIntervalo();
-            }}
-          >
-            &#9654;
-          </button>
+            {posicionA < items.length && (
+              <button
+                className={`${estilos.flecha} ${estilos.flecha_derecha}`}
+                onClick={() => {
+                  clickDerecho();
+                  reiniciarIntervalo();
+                }}
+              >
+                &#9654;
+              </button>
+            )}
+          </>
         )}
       </div>
     </div>

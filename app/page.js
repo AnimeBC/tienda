@@ -4,6 +4,7 @@ import { useState } from "react";
 /**import de jsaon de datos*/
 import barra from './datos.json';
 import planes from "./planes.json"
+import servicios from "./Servicios.json"
 /**Import de componentes */
 import Barra from "@/_componentes/_Barra/Barra";
 import Contenido from "@/_componentes/_Contenido/Contenido";
@@ -27,7 +28,7 @@ export default function Home() {
         </Planes>  
       </div>
       <div>
-        <Servicios/> 
+        <Servicios  datos={servicios} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado}  Fseleccion={Fseleccion} seleccion={seleccion}  /> 
       </div>
       <div>
         <Noticias idiomaSeleccionado={idiomaSeleccionado}></Noticias>

@@ -8,30 +8,23 @@ export default function Planes({
   Fseleccion,
   seleccion,
 }) {
-  const [isLoading, setIsLoading] = useState(false);
   const [capturaDeEleccion, FcapturaDeEleccion] = useState(null);
   const [contenidoElegido, FcontenidoElegido] = useState([]);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      const listaDeOpciones = Object.keys(datos[idiomaSeleccionado]);
-      FcapturaDeEleccion(listaDeOpciones[0]);
-      FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][listaDeOpciones[0]]));
-      setIsLoading(false);
-    }, 1000); // 1 segundo de retardo simulado
-  }, [idiomaSeleccionado]);
+    const listaDeOpciones = Object.keys(datos[idiomaSeleccionado]);
+    FcapturaDeEleccion(listaDeOpciones[0]);
+    FcontenidoElegido(
+      Object.entries(datos[idiomaSeleccionado][listaDeOpciones[0]])
+    );
+  }, [idiomaSeleccionado, datos]);
 
   function cambiarOpcion(a) {
-    setIsLoading(true);
-    setTimeout(() => {
-      FcapturaDeEleccion(String(a));
-      FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][a]));
-      setIsLoading(false);
-    }, 1000); // 1 segundo de retardo simulado
+    FcapturaDeEleccion(a);
+    FcontenidoElegido(Object.entries(datos[idiomaSeleccionado][a]));
   }
 
-  const carouselRef = useRef(null);
   let isDragging = false;
   let startPosition = 0;
   let startScrollLeft = 0;
@@ -81,7 +74,8 @@ export default function Planes({
 
   const easeOutQuad = (t) => t * (2 - t);
 
-  const getPositionX = (event) => event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  const getPositionX = (event) =>
+    event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
 
   return (
     <div className={estilos.todo}>
@@ -89,7 +83,9 @@ export default function Planes({
         {Object.keys(datos[idiomaSeleccionado]).map((a, b) => (
           <div
             key={b}
-            className={`${estilos.eleccion} ${capturaDeEleccion === a ? estilos.seleccionado : ''}`}
+            className={`${estilos.eleccion} ${
+              capturaDeEleccion === a ? estilos.seleccionado : ""
+            }`}
             onClick={() => cambiarOpcion(a)}
           >
             {a}
@@ -104,14 +100,12 @@ export default function Planes({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {isLoading ? (
-          <div className={estilos.loading}>Cargando...</div>
-        ) : contenidoElegido.length > 0 ? (
+        {contenidoElegido.length > 0 ? (
           contenidoElegido.map(([a, b]) => (
             <div key={a} className={estilos.contenidoA}>
-              <h3>{b.nombre}</h3>
-              <p>{b.descripcion}</p>
-              <p>Beneficios: {b.beneficios}</p>
+              <h3>{b.nombre || b.name}</h3>
+              <p>{b.descripcion || b.description}</p>
+              <p>Beneficios: {b.beneficios || b.benefits}</p>
               <p>Precio: {b.precio}</p>
             </div>
           ))
