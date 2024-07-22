@@ -2,7 +2,7 @@
 import estilos from "./barra.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
+import Imagenes from "../_imagenes/Imagenes";
 export default function Barra({
   datos,
   FidiomaSeleccionado,
@@ -63,7 +63,9 @@ export default function Barra({
 
   return (
     <div className={`${estilos.todo} ${fixed ? estilos.fixed : ''}`}>
-      <div className={estilos.logo}>BITEL</div>
+      <div className={estilos.logo}>
+        <Imagenes url={"Bitel.png"}/>
+      </div>
       <div className={estilos.navegacion}>
         <nav className={estilos.navegacionA}>
           <ul className={estilos.navegacionul}>

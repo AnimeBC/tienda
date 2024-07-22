@@ -1,7 +1,15 @@
 {
-    "imagenes": {
-        "1":"1.jpeg",
-        "2":"imagen1.png"
+    "datos": {
+        "1": {
+            "imagen": "1.jpeg",
+            "link":"#hola"
+        },
+        "2": {
+            "imagen": "imagen1.png",
+            "titulo": "Título 2",
+            "descripcion": "Descripción de la imagen 2",
+            "opcion": "Ver más",
+            "link":"#extra"
+        }
     }
 }
-  

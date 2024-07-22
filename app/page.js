@@ -19,6 +19,9 @@ export default function Home() {
       <nav>
         <Barra datos={barra} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado}  Fseleccion={Fseleccion} seleccion={seleccion} ></Barra>
       </nav>
+      {
+        
+      }
       <div>
         <Contenido Fseleccion={Fseleccion} seleccion={seleccion} FidiomaSeleccionado={FidiomaSeleccionado} idiomaSeleccionado={idiomaSeleccionado} >
         </Contenido>  
